@@ -18,6 +18,20 @@
 * How do I find the date that is a number of months from/before now with SQL?
 * How can I get the current time with SQL?
 * How do I convert string to a date with SQL?
+* What is the difference between….all the functions that find a substring 1st position?
+* How do I change the case of a string with SQL?
+
+* How do I quickly evaluate a text string in SQL?
+* How do I analyse a string length and punctuation with SQL?
+* How do I replace a string in SQL and make sure it has no extra spaces?
+* How do I determine the length of a string with SQL?
+* How do I find the first position of a string within a string with SQL?
+* How do I get part of a string with SQL? (part 2)
+* How do I get a part of a string with SQL? (part 1)
+
+* How do I concatenate strings with SQL?
+* How do I round numbers with SQL?
+* How can I compare values with SQL?
 
 **NOTE:**
 check the wiki for more detailed guide on content
