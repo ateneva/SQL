@@ -62,4 +62,4 @@
 ## NOTE: 
 The snippets in the repo **are being updated with additional database syntax snippets I come across**
 
-Need more detailed explanations? Check the Wiki pages for references to the exact blog articles
+Need more detailed explanations? **Check the Wiki pages for references to the exact blog articles**
