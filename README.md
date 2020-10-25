@@ -1,6 +1,5 @@
 
 # Here you can find anything SQL-related 
-## from differences in syntax between different databases to handy function explanations
 
 * [How do I find the difference between two time periods with SQL?](https://github.com/ateneva/SQL/blob/main/syntax_comparisons/1_date_age_in_years_months.sql)
 
