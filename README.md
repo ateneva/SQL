@@ -2,11 +2,6 @@
 # Here you can find anything SQL-related 
 ## from differences in syntax between different databases to handy function explanations
 
-
-## NOTE: 
-The snippets in the repo **are being updated with additional database syntax snippets I come across**
-
-
 * [How do I find the difference between two time periods with SQL?](https://github.com/ateneva/SQL/blob/main/syntax_comparisons/1_date_age_in_years_months.sql)
 
 * [How do I find the next Monday/Tuesday/etc.. with SQL?](https://github.com/ateneva/SQL/blob/main/syntax_comparisons/1_date_next_day.sql)
@@ -60,10 +55,10 @@ The snippets in the repo **are being updated with additional database syntax sni
 
 * [How do I get a part of a string with SQL? (part 1)](https://datageeking.wordpress.com/2017/12/18/how-do-i-get-a-part-of-a-string-with-sql-part-1/)
 
-
 * [How do I concatenate strings with SQL?](https://github.com/ateneva/SQL/blob/main/syntax_comparisons/2_string_concatenate_all_DBs.sql)
-
 
 * [How do I round numbers with SQL?](https://github.com/ateneva/SQL/blob/main/syntax_comparisons/3_math_round_functions.sql)
 * [How can I compare values with SQL?](https://github.com/ateneva/SQL/blob/main/syntax_comparisons/3_math_compare_values.sql) 
 
+## NOTE: 
+The snippets in the repo **are being updated with additional database syntax snippets I come across**
