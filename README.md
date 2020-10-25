@@ -1,5 +1,6 @@
 
-# Here you can find anything SQL-related - from differences in syntax between different databases to handy function explanations
+# Here you can find anything SQL-related 
+## from differences in syntax between different databases to handy function explanations
 
 * How do I find the difference between two time periods with SQL?
 * How do I find the next Monday/Tuesday/etc.. with SQL?
@@ -17,3 +18,6 @@
 * How do I find the date that is a number of months from/before now with SQL?
 * How can I get the current time with SQL?
 * How do I convert string to a date with SQL?
+
+**NOTE:**
+check the wiki for more detailed guide on content
