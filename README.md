@@ -60,7 +60,7 @@
 * [How can I compare values with SQL?](https://github.com/ateneva/SQL/blob/main/syntax_comparisons/3_math_compare_values.sql) 
 
 ## NOTE: 
-The snippets in the repo **are being updated with additional database syntax snippets I come across**
+The snippets in the repo **are being updated with additional syntax differences as I come to use different databases**
 
 Need more detailed explanations? 
 **check the Wiki pages for references to the exact blog articles**
