@@ -1,11 +1,7 @@
 
-# no snippet yet
-# no gist yet
-# no blog article yet
-
 --------------------------------------Vertica----------------------------------------------------------------------------------------------------
 
-select 
+select
 
 now() at time zone 'Pacific/Auckland NZ'          as NZT,   -- + 12.00 Welington, New Zealand
 now() at time zone 'Australia/Brisbane'           as AEST,  -- Australa Eastern Standard Time = Brisbane, Sydney, Melbourne, Canberra
@@ -25,13 +21,13 @@ now() at time zone 'America/Los_Angeles'          as PST    -- Vancouver, Los An
 
 --------------------------------------PostgreSQL--------------------------------------------------------------------------------------------------
 
-select 
+select
 
 now() at time zone 'NZT'                          as NZT,   -- + 12.00 Welington, New Zealand
 now() at time zone 'AEST'                         as AEST,  -- Australa Eastern Standard Time = Brisbane, Sydney, Melbourne, Canberra
 now() at time zone 'CAST'                         as cast,  -- Central Australia Standard Time = Adelaide
 now() at time zone 'JST'                          as JST,   -- Japan Standard Time = Tokyo, Seoul
-now() at time zone 'AWST'                         as AWST,  -- Australia Western Standard Time = Perth 
+now() at time zone 'AWST'                         as AWST,  -- Australia Western Standard Time = Perth
 
 now() at time zone 'EET'                          as EET,   -- Sofia, Athens, Vilnius, Bucharest
 now() at time zone 'CET'                          as CET,   -- Amsterdam, Paris, Berlin, Madrid, Rome
@@ -46,7 +42,7 @@ now() at time zone 'PST'                          as PST    -- Vancouver, Los An
 
 #--------------------------------------MySQL-----------------------------------------------------------------------------------------------------
 
-select 
+select
 
 convert_tz(now(), 'CET', 'Pacific/Auckland')      as NZT,   #-- + 12.00 Welington, New Zealand
 convert_tz(now(), 'CET', 'Australia/Brisbane')    as AEST,  #-- Australa Eastern Standard Time = Brisbane, Sydney, Melbourne, Canberra
@@ -62,5 +58,3 @@ convert_tz(now(), 'CET', 'EST')                   as EST,   #-- Toronto, New Yor
 convert_tz(now(), 'CET', 'America/Chicago')       as CST,   #-- Winnipeg, Chicago, Houston, Kansas, New Orleans
 convert_tz(now(), 'CET', 'MST')                   as MST,   #-- Edmonton, Calgary, Denver, Phoenix
 convert_tz(now(), 'CET', 'America/Los_Angeles')   as PST    #-- Vancouver, Los Angeles
-
-
