@@ -29,6 +29,8 @@
 * How do I get part of a string with SQL? (part 2)
 * How do I get a part of a string with SQL? (part 1)
 
+* [How can I compare values with SQL?](https://datageeking.wordpress.com/2017/12/12/how-can-i-compare-values-with-sql/) 
+
 * How do I concatenate strings with SQL?
 * How do I round numbers with SQL?
 * How can I compare values with SQL?
