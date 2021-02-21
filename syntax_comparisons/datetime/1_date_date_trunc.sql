@@ -31,7 +31,7 @@ firstdayofcurrentweek |firstdayofcurrentmonth |firstdayofcurrentyear |
 
 ----------------------------SQL Server---------------------------------------------------------
 
-select 
+select
 
 convert(date, getdate()) as Today,
 datepart(dw, getdate()) as Weekday,
@@ -58,7 +58,7 @@ Today      |Weekday |FirstDayofCurrentWeek |FirstDayofCurrentMonth |FirstDayofCu
 
 -------------------------------MySQL--------------------------------------------------------------
 
-select 
+select
 
 Date(Now())                                                  as Today,
 weekday(Now())                                               as WeekdayToday,
@@ -72,7 +72,7 @@ case #---------------------------Mon-Sun week--------------------------------
 	when weekday(Now()) = 5 then date(date_add(Now(), interval -5 day))
 	when weekday(Now()) = 6 then date(date_add(Now(), interval -6 day))
                                                          end as FirstDayofCurrentWeek,
-	
+
 date_format(Now(), '%Y-%m-01')                               as FirstDayofCurrentMonth,
 date_format(Now(), '%Y-01-01')                               as FirstDayofCurrentYear
 
@@ -80,3 +80,28 @@ Today      |WeekdayToday |FirstDayofCurrentWeek |FirstDayofCurrentMonth |FirstDa
 -----------|-------------|----------------------|-----------------------|----------------------|
 2017-11-12 |6            |2017-11-06            |2017-11-01             |2017-01-01            |
 
+
+------------------------------BigQuery-----------------------------------------------------------------
+
+SELECT
+CURRENT_DATE() AS NOW,
+DATE_TRUNC(CURRENT_DATE(), WEEK)           AS FirstDayOfCurrentWeek,
+DATE_TRUNC(CURRENT_DATE(), WEEK(FRIDAY))   AS FirstDayOfDefinedCurrentWeek,
+DATE_TRUNC(CURRENT_DATE(), ISOWEEK)        AS FirstDayOfCurrentISOWeek,
+DATE_TRUNC(CURRENT_DATE(), MONTH)          AS FirstDayofCurrentMonth,
+DATE_TRUNC(CURRENT_DATE(), QUARTER)        AS FirstDayofCurrentQuarter,
+DATE_TRUNC(CURRENT_DATE(), YEAR)           AS FirstDayOfCurrentYear,
+DATE_TRUNC(CURRENT_DATE(), ISOYEAR)        AS FirstDayOfCurrentISOYear
+
+[
+  {
+    "NOW": "2020-11-08",
+    "FirstDayOfCurrentWeek": "2020-11-08",
+    "FirstDayOfDefinedCurrentWeek": "2020-11-06",
+    "FirstDayOfCurrentISOWeek": "2020-11-02",
+    "FirstDayofCurrentMonth": "2020-11-01",
+    "FirstDayofCurrentQuarter": "2020-10-01",
+    "FirstDayOfCurrentYear": "2020-01-01",
+    "FirstDayOfCurrentISOYear": "2019-12-30"
+  }
+]

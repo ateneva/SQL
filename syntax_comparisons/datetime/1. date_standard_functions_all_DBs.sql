@@ -27,20 +27,20 @@ week_iso(Now()) as WeekNumEU           ---week numbeer, ISO standard
 
 select
 
-Now(),                                
-Date(Now())          as Today,                           
-Year(Now())          as ThisYear,                           
-Quarter(Now())       as ThisQuarter,                        
-Month(Now())         as ThisMonth,                          
-Day(Now())           as ThisDay,                            
+Now(),
+Date(Now())          as Today,
+Year(Now())          as ThisYear,
+Quarter(Now())       as ThisQuarter,
+Month(Now())         as ThisMonth,
+Day(Now())           as ThisDay,
 
 dayofyear(Now())     as DayOfYear,
 dayofmonth(Now())    as DayOfMonth,
 dayofweek(Now())     as DayofWeek,   #1 = Sunday, 2 = Monday, …, 7 = Saturday)
 weekday(Now())       as WeekdayNum,  #0 = Monday, 1 = Tuesday, … 6 = Sunday
-           
+
 weekofyear(Now())    as WeekNumUS,
-week(Now())        	 as WeekNumUS   
+week(Now())        	 as WeekNumUS
 
 Now()               |Today      |ThisYear |ThisQuarter |ThisMonth |ThisDay |
 --------------------|-----------|---------|------------|----------|--------|
@@ -57,9 +57,9 @@ DayOfYear |DayOfMonth |DayofWeek |WeekdayNum |WeekNumUS |WeekNumUS |
 select
 
 getdate()              as Now,
-Year(getdate())        as ThisYear,     
-Month(getdate())       as ThisMonth,    
-Day(getdate())         as Today       
+Year(getdate())        as ThisYear,
+Month(getdate())       as ThisMonth,
+Day(getdate())         as Today
 
 
 Now                 |ThisYear |ThisMonth |Today |
@@ -67,3 +67,28 @@ Now                 |ThisYear |ThisMonth |Today |
 2017-10-26 16:21:57 |2017     |10        |26    |
 
 
+------------------------BigQuery -----------------------------------------------------------------------------------
+SELECT
+CURRENT_DATE() AS NOW,
+EXTRACT(YEAR FROM CURRENT_DATE())        AS CurrentYear,
+EXTRACT(QUARTER FROM CURRENT_DATE())     AS CurrentQuarter,
+EXTRACT(MONTH FROM CURRENT_DATE())       AS CurrentMonth,
+EXTRACT(WEEK FROM CURRENT_DATE())        AS CurrentWeek,     --starts by default on Sunday, but argument can be passed
+EXTRACT(ISOWEEK FROM CURRENT_DATE())     AS CurrentIsoWeek,  --starts on Monday
+EXTRACT(DAY FROM CURRENT_DATE())         AS CurrentDay,
+EXTRACT(DAYOFYEAR FROM CURRENT_DATE())   AS CurrentDayOfYear,
+EXTRACT(DAYOFWEEK FROM CURRENT_DATE())   AS CurrentDayOfWeek
+
+[
+  {
+    "NOW": "2020-11-08",
+    "CurrentYear": 2020,
+    "CurrentQuarter": 4,
+    "CurrentMonth": 11,
+    "CurrentWeek": 45,
+    "CurrentIsoWeek": 45,
+    "CurrentDay": 8,
+    "CurrentDayOfYear": 313,
+    "CurrentDayOfWeek": 1
+  }
+]

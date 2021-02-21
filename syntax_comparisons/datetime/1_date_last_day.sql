@@ -21,12 +21,12 @@ Today      |LastDayPreviousMonth |LastDayThisMonth |LastDayNextMonth |
 
 ---------------------------------Vertica----------------------------------------------------------------------------
 
-select 
+select
 
 now()                          as Today
-last_day(Now())                as LastDayofCurrentMonth,     
-last_day(add_months(Now(),-1)) as LastDayofPreviousMonth,     
-last_day(add_months(Now(), 1)) as LastDayofNextMonth           
+last_day(Now())                as LastDayofCurrentMonth,
+last_day(add_months(Now(),-1)) as LastDayofPreviousMonth,
+last_day(add_months(Now(), 1)) as LastDayofNextMonth
 
 
 Today      |LastDayPreviousMonth |LastDayThisMonth |LastDayNextMonth |
@@ -64,3 +64,26 @@ today      |lastdaypreviousmonth |lastdaythismonth |lastdaynextmonth |
 2017-11-18 |2017-10-31           |2017-11-30       |2017-12-31       |
 
 
+-------------------------------BigQuery -----------------------------------------------------------------------------
+SELECT
+CURRENT_DATE() AS NOW,
+LAST_DAY(CURRENT_DATE(), WEEK)            AS LastDayOfCurrentWeek,
+LAST_DAY(CURRENT_DATE(), WEEK(FRIDAY))    AS LastDayOfCurrentDefinedWeek,
+LAST_DAY(CURRENT_DATE(), ISOWEEK)         AS LastDayOfCurrentISOWeek,
+LAST_DAY(CURRENT_DATE(), MONTH)           AS LastDayofCurrentMonth,
+LAST_DAY(CURRENT_DATE(), QUARTER)         AS LastDayofCurrentQuarter,
+LAST_DAY(CURRENT_DATE(), YEAR)            AS LastDayOfCurrentYear,
+LAST_DAY(CURRENT_DATE(), ISOYEAR)         AS LastDayOfCurrentISOYear
+
+[
+  {
+    "NOW": "2020-11-08",
+    "LastDayOfCurrentWeek": "2020-11-14",
+    "LastDayOfCurrentDefinedWeek": "2020-11-12",
+    "LastDayOfCurrentISOWeek": "2020-11-08",
+    "LastDayofCurrentMonth": "2020-11-30",
+    "LastDayofCurrentQuarter": "2020-12-31",
+    "LastDayOfCurrentYear": "2020-12-31",
+    "LastDayOfCurrentISOYear": "2021-01-03"
+  }
+]

@@ -71,3 +71,55 @@ yearsbetweendates                                      |
 29 years 5 mons 19 days 21 hours 0 mins 39.466046 secs |
 
 
+
+-------------------BigQuery (datetime_expression, datetime_expression, part)----------------------------------
+SELECT
+CURRENT_DATE() AS NOW,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), YEAR )          AS YearsBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), QUARTER)        AS QuartersBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), MONTH)          AS MonthsBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), ISOWEEK)        AS IsoWeeksBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), WEEK)           AS WeeksBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), WEEK(FRIDAY))   AS DefinedWeeksBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), DAY)            AS DaysBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), HOUR)           AS HoursBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), MINUTE)         AS MinutesBetweenDatetimes,
+DATETIME_DIFF(CURRENT_DATE(), CAST('2019-01-21' AS DATE), SECOND)         AS SecondsBetweenDatetimes,
+
+
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), YEAR )          AS YearsBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), QUARTER)        AS QuartersBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), MONTH)          AS MonthsBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), ISOWEEK)        AS IsoWeeksBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), WEEK)           AS WeeksBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), WEEK(FRIDAY))   AS DefinedWeeksBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), DAY)            AS DaysBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), HOUR)           AS HoursBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), MINUTE)         AS MinutessBetweenDatetimes,
+DATETIME_DIFF(CAST('2019-01-21' AS DATE), CURRENT_DATE(), SECOND)         AS SecondsBetweenDatetimes
+
+[
+  {
+    "NOW": "2020-11-08",
+    "YearsBetweenDatetimes": 1,
+    "QuartersBetweenDatetimes": 7,
+    "MonthsBetweenDatetimes": 22,
+    "IsoWeeksBetweenDatetimes": 93,
+    "WeeksBetweenDatetimes": 94,
+    "DefinedWeeksBetweenDatetimes": 94,
+    "DaysBetweenDatetimes": 657,
+    "HoursBetweenDatetimes": 15768,
+    "MinutesBetweenDatetimes": 946080,
+    "SecondsBetweenDatetimes": 56764800,
+    "YearsBetweenDatetimes_1": -1,
+    "QuartersBetweenDatetimes_1": -7,
+    "MonthsBetweenDatetimes_1": -22,
+    "IsoWeeksBetweenDatetimes_1": -93,
+    "WeeksBetweenDatetimes_1": -94,
+    "DefinedWeeksBetweenDatetimes_1": -94,
+    "DaysBetweenDatetimes_1": -657,
+    "HoursBetweenDatetimes_1": -15768,
+    "MinutessBetweenDatetimes": -946080,
+    "SecondsBetweenDatetimes_1": -56764800
+  }
+]
